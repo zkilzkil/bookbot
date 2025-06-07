@@ -12,3 +12,11 @@ def num_char(text):
 		else: 
 			char_count[char] = 1
 	return char_count
+
+# take dict of chars and counts, return sorted list of dict
+def sort_char_count(char_count):
+	dict_list = []
+	for char, count in char_count.items():
+		dict_list.append({"char": char, "count": count})
+	dict_list.sort(key=lambda item: item["count"])
+	return dict_list
